@@ -1,4 +1,4 @@
-import { HttpInterceptorService } from './interceptor/http-interceptor.service';
+import { HttpInterceptorService } from './interceptors/http-interceptor.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
