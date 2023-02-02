@@ -1,3 +1,4 @@
+import { DemoService } from './../../../../services/demo.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DemoComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _demo: DemoService) { }
 
   ngOnInit(): void {
+    this._demo.request().subscribe((resp: any) => {
+      console.log("ankit", resp);
+    })
   }
 
 }
