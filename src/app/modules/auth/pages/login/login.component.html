@@ -1,2 +1,47 @@
-<p>login works!</p>
-<p>login works!</p>
+<!-- <p>login works!</p>
+<p>login works!</p> -->
+
+<div class="login-main">
+  <div>
+    <form [formGroup]="loginForm" (ngSubmit)="onSignIn()">
+      <mat-form-field class="container">
+        <div class="title">
+          <div class="inner-box">
+            <mat-label class="label">Log In</mat-label>
+          </div>
+        </div>
+        <div class="username">
+          <input
+            matInput
+            type="email"
+            placeholder="Email"
+            formControlName="email"
+            id="email"
+            autocomplete="off"
+            required
+          />
+        </div>
+        <div class="password">
+          <input
+            matInput
+            type="password"
+            placeholder="Password"
+            formControlName="password"
+            id="password"
+            autocomplete="off"
+            required
+          />
+        </div>
+        <div class="sign-in-btn">
+          <button
+            class="button-red"
+            [disabled]="loginForm.invalid"
+            type="submit"
+          >
+            Sign In
+          </button>
+        </div>
+      </mat-form-field>
+    </form>
+  </div>
+</div>

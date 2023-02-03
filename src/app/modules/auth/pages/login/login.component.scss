@@ -1,0 +1,124 @@
+.login-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  // background-color: antiquewhite;
+
+  .container {
+    width: 50vw;
+    height: 50vh;
+    // border: 1px solid red;
+
+    .title {
+      width: 100%;
+      height: 20%;
+      // border: 1px solid red;
+
+      .inner-box {
+        display: flex;
+        justify-content: center;
+        height: 10vh;
+
+        .label {
+          font-size: xx-large;
+        }
+      }
+    }
+    .username {
+      width: 100%;
+      // border: 1px solid red;
+      height: 40%;
+      height: 13vh;
+      margin-top: 50px;
+
+      input {
+        border: none;
+        border-bottom: 2px solid var(--grey);
+        outline: none;
+        padding: 0.5rem 1rem;
+        margin-top: 1.8rem;
+        width: 100%;
+
+        &::placeholder {
+          color: var(--grey);
+          font-size: 1.2rem;
+        }
+
+        &::content {
+          // padding-left: 4rem;
+          font-size: 1.2rem;
+          color: var(--dark-grey);
+        }
+      }
+    }
+    .password {
+      width: 100%;
+      // border: 1px solid red;
+      height: 40%;
+    }
+  }
+  input {
+    border: none;
+    border-bottom: 2px solid var(--grey);
+    outline: none;
+    padding: 0.5rem 1rem;
+    margin-top: 1.8rem;
+    width: 100%;
+
+    &::placeholder {
+      color: var(--grey);
+      font-size: 1.2rem;
+    }
+
+    &::content {
+      // padding-left: 4rem;
+      font-size: 1.2rem;
+      color: var(--dark-grey);
+    }
+  }
+
+  .sign-in-btn {
+    button {
+      margin-bottom: 20px;
+      margin-top: 20px;
+      border: 1px solid red;
+    }
+
+    .text-span {
+      display: flex;
+      justify-content: center;
+      color: var(--dark-grey);
+      align-items: center;
+      // border: 1px solid red;
+
+      .line {
+        border-top: 1px solid var(--grey);
+      }
+
+      .text {
+        margin: 0 5px;
+      }
+
+      div {
+        width: 35%;
+      }
+    }
+  }
+  .button-red {
+    width: 100%;
+    padding: 0.8rem;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 1.3rem;
+    background-color: var(--red);
+    color: var(--white);
+    transition: all 0.5s;
+
+    &:disabled {
+      background-color: var(--grey);
+    }
+  }
+}
