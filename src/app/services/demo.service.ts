@@ -10,7 +10,10 @@ export class DemoService {
   constructor(private http: HttpClient) { }
 
   request(): Observable<any> {
-    console.log("sending request");
-    return this.http.get("https://www.google.com")
+    return this.http.get("https://jsonplaceholder.typicode.com/posts")
+  }
+
+  post(): Observable<any> {
+    return this.http.post("https://jsonplaceholder.typicode.com/posts", null)
   }
 }
