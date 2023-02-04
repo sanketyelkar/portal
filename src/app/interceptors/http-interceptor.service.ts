@@ -50,6 +50,7 @@ export class HttpInterceptorService {
         };
         let errMsg: any;
         if (data.reason === 401) {
+
           return throwError(error);
         } else if (data.reason === 0)
           errMsg = 'notification.error.server.0';
