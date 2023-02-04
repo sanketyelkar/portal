@@ -8,17 +8,23 @@ import { catchError, map, Observable, throwError } from 'rxjs';
 })
 export class HttpInterceptorService {
 
-  tempToken: string = "demo-token-kjwhuiywdhjhgeyjghdjhjagdd5443d43s4d3a434d3a4d34as32d43wasd"
+  tempToken: string = "Bearer 1A2b3C4d5E6f7G8h9IAgBKClD"
 
   constructor() { }
 
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     if (this.tempToken) {
-      if (request.url.includes('auth')) {
+      if (request.url.includes('jsonplaceholder.typicode.com')) {
+        console.log("ankit inside");
+
         request = request.clone({
           setHeaders: {
             'Access-Control-Allow-Origin': '*',
-          }
+          },
+          params: request.params.set(
+            'userId',
+            '7'
+          )
         });
       }
       else {

@@ -5,7 +5,6 @@ import { DemoRoutingModule } from './demo-routing.module';
 import { DemoComponent } from './page/demo/demo.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 
-
 @NgModule({
   declarations: [
     DemoComponent,
@@ -17,4 +16,4 @@ import { SharedModule } from 'src/app/shared/shared.module';
     
   ]
 })
-export class DemoModule { }
+export class DemoModule {}

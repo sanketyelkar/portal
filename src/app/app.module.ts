@@ -10,6 +10,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { HomeComponent } from './components/home/home.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+<<<<<<< HEAD
+=======
+import { AuthModule } from './modules/auth/auth.module';
+import { LoginComponent } from './modules/auth/pages/login/login.component';
+
+>>>>>>> ef8e9d6b61079651497707cc94ef9b6514a5e532
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,15 +28,16 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
     CoreModule,
     SharedModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    AuthModule,
   ],
   providers: [
     {
       provide: HTTP_INTERCEPTORS,
       useClass: HttpInterceptorService,
-      multi: true
-    }
+      multi: true,
+    },
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

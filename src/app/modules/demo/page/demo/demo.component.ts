@@ -11,9 +11,12 @@ export class DemoComponent implements OnInit {
   constructor(private _demo: DemoService) { }
 
   ngOnInit(): void {
-    this._demo.request().subscribe((resp: any) => {
+    this._demo.post().subscribe((resp: any) => {
       console.log("ankit", resp);
-    })
+    }, (error => {
+      console.log("ankit error", error);
+
+    }))
   }
 
 }
