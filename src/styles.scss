@@ -2,3 +2,18 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
+
+:root {
+	--red: #ea2429;
+	--pink: #ff9797;
+	--white: #ffffff;
+	--light-grey: #f8f8f8;
+	--grey: #c7c8ca;
+	--dark-grey: #494849;
+	--sky-blue: #709cc9;
+	--light-pink: #ea242936;
+	--light-grey-tabs: #efefef;
+	--grey-shadow: #4346561a;
+}

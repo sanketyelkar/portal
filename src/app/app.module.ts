@@ -10,12 +10,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { HomeComponent } from './components/home/home.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-
 @NgModule({
   declarations: [
     AppComponent,
     SidebarComponent,
-    HomeComponent
+    HomeComponent,
   ],
   imports: [
     BrowserModule,

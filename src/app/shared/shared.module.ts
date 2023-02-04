@@ -26,11 +26,15 @@ import { MatTableModule } from '@angular/material/table';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { LoaderComponent } from '../components/loader/loader.component';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    LoaderComponent
+  ],
   imports: [
     CommonModule,
     FormsModule,
@@ -60,7 +64,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
     MatChipsModule,
     ReactiveFormsModule,
     RouterModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatProgressSpinnerModule
   ],
   exports: [
     CommonModule,
@@ -91,7 +96,9 @@ import { MatSidenavModule } from '@angular/material/sidenav';
     MatChipsModule,
     ReactiveFormsModule,
     RouterModule,
-    MatSidenavModule
+    MatSidenavModule,
+    LoaderComponent,
+    MatProgressSpinnerModule
   ]
 })
 export class SharedModule { }
